@@ -3,17 +3,17 @@
 </div>
 
 <script>
-	var CodeMirror = require( 'codemirror/codemirror' );
+	var CodeMirror = require( 'codemirror' );
 
-	require( 'codemirror/htmlmixed' );
-	require( 'codemirror/javascript' );
+	require( 'codemirror/mode/htmlmixed/htmlmixed' );
+	require( 'codemirror/mode/javascript/javascript' );
 
-	keyNames = {
+	var keyNames = {
 		'13': 'enter'
 	};
 
 	component.exports = {
-		init: function () {
+		onrender: function () {
 			var component = this, mode, editor, doc, updating;
 
 			mode = this.get( 'mode' );

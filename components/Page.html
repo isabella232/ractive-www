@@ -1,0 +1,33 @@
+<link rel='ractive' href='./Nav.html'>
+<link rel='ractive' href='./Footer.html'>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title>Ractive.js | The diamond age of web development</title>
+
+	<meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1'>
+
+	<link rel='icon' type='image/png' href='assets/favicon.png'>
+
+	{{yield head}}
+
+	<!--[if lte IE 8]>
+		<script src='//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js'></script>
+		<script src='//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js'></script>
+	<![endif]-->
+</head>
+
+<body>
+	<div class='nav-container'>
+		<Nav tab='[[tab]]'/>
+	</div>
+
+	{{yield}}
+
+	<Footer/>
+
+	{{yield scripts}}
+</body>
+</html>
