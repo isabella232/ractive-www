@@ -3,15 +3,17 @@
 header {
 	max-width: 64em;
 	margin: 0 auto 2em auto;
-	padding: 2em 0 0 0;
-	border-bottom: 1px solid #eee;
+	padding: 2em 1em 0 1em;
+
 	@include border-box;
 	@include clearfix;
 
 	h1 {
 		font-size: 2em;
-		margin: 0 0.2em 0.2em 0;
+		margin: 0;
+		padding: 0 0 1rem 0;
 		line-height: 1;
+		border-bottom: 1px solid #eee;
 	}
 
 	.subhead {

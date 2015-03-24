@@ -1,31 +1,31 @@
 <nav>
 	<div class='nav-inner'>
-		<a {{#if active === 'home'}}selected{{/if}} href='http://ractivejs.org'>Ractive.js</a>
+		<a {{#if tab === 'home'}}class='selected'{{/if}} href='http://ractivejs.org'>Ractive.js</a>
 
 		<ul style='height: {{expanded ? "auto" : 0}};'>
 			<li><a
-				{{#if active === '60-second-setup'}}selected{{/if}}
+				{{#if tab === 'setup'}}class='selected'{{/if}}
 				href='http://ractivejs.org/60-second-setup'
 			>60 second setup</a></li>
 
 			<li><a
-				{{#if active === 'learn'}}selected{{/if}}
+				{{#if tab === 'learn'}}class='selected'{{/if}}
 				href='http://learn.ractivejs.org'>Tutorials</a></li>
 
 			<li><a
-				{{#if active === 'examples'}}selected{{/if}}
-				class='selected' href='http://examples.ractivejs.org'>Examples</a></li>
+				{{#if tab === 'examples'}}class='selected'{{/if}}
+				href='http://examples.ractivejs.org'>Examples</a></li>
 
 			<li><a
-				{{#if active === 'docs'}}selected{{/if}}
+				{{#if tab === 'docs'}}class='selected'{{/if}}
 				href='http://docs.ractivejs.org'>Docs</a></li>
 
 			<li><a
-				{{#if active === 'plugins'}}selected{{/if}}
+				{{#if tab === 'plugins'}}class='selected'{{/if}}
 				href='http://docs.ractivejs.org/latest/plugins'>Plugins</a></li>
 
 			<li><a
-				{{#if active === 'blog'}}selected{{/if}}
+				{{#if tab === 'blog'}}class='selected'{{/if}}
 				href='http://blog.ractivejs.org'>Blog</a></li>
 
 			<li class='github-small'><a href='https://github.com/ractivejs/ractive'>GitHub</a></li>
@@ -40,7 +40,8 @@
 <script>
 	component.exports = {
 		data: {
-			expanded: false
+			expanded: false,
+			tab: null
 		},
 
 		events: {
